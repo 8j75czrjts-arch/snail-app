@@ -1,0 +1,16 @@
+{
+  "name": "Drank Snail Natra",
+  "short_name": "Snail Natra",
+  "description": "Drink water. Don't die. A water tracker with a sassy diva snail.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFBF1",
+  "theme_color": "#FFFBF1",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

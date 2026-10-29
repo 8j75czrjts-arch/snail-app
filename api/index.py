@@ -1,4 +1,4 @@
-"""Drank Snail Natra API: one Vercel function that fronts Supabase.
+"""Drank Snailnatra API: one Vercel function that fronts Supabase.
 
 The browser never talks to Supabase. It sends a per-user token (the user's id) to this
 function, which validates the input and reads or writes the sn_* tables with the
@@ -336,14 +336,14 @@ def _plural(n):
 
 # (kind, hour, minute, condition(count, needed), text(count, needed)). Every one also needs count < needed.
 NAGS = [
-    ("n0900", 9, 0, lambda c, n: True, lambda c, n: "Good morning. Snail Natra is parched and he's not happy about it."),
+    ("n0900", 9, 0, lambda c, n: True, lambda c, n: "Good morning. Snailnatra is parched and he's not happy about it."),
     ("n1100", 11, 0, lambda c, n: c == 0, lambda c, n: "Damn, he's thirsty. Not one drop? Really?"),
     ("n1300", 13, 0, lambda c, n: c < 1, lambda c, n: "His agent called. He wants water. Now."),
     ("n1500", 15, 0, lambda c, n: c < n / 2, lambda c, n: "He's drying out like a raisin. Drink something."),
     ("n1800", 18, 0, lambda c, n: c < n / 2, lambda c, n: "It's getting late and he's getting crispy."),
     ("n2000", 20, 0, lambda c, n: True, lambda c, n: f"{_plural(n - c)} to go. He's already in costume. Don't embarrass him."),
-    ("n2100", 21, 0, lambda c, n: True, lambda c, n: "Snail Natra has 3 hours to live."),
-    ("n2230", 22, 30, lambda c, n: True, lambda c, n: "Snail Natra is fucking dying."),
+    ("n2100", 21, 0, lambda c, n: True, lambda c, n: "Snailnatra has 3 hours to live."),
+    ("n2230", 22, 30, lambda c, n: True, lambda c, n: "Snailnatra is fucking dying."),
     ("n2330", 23, 30, lambda c, n: True, lambda c, n: "Last call. He's writing his will. You're not in it."),
 ]
 NAG_WINDOW_MIN = 45   # a nag still goes out if the cron run is up to this late
@@ -425,7 +425,7 @@ def run_cron(store, now_utc=None, sender=None):
                 store.insert("sn_nags", [{"user_id": uid, "day": today.isoformat(), "kind": kind}])
                 for sub in subs:
                     try:
-                        sender(sub, {"title": "Snail Natra", "body": text, "tag": kind, "url": "/"})
+                        sender(sub, {"title": "Snailnatra", "body": text, "tag": kind, "url": "/"})
                         sent += 1
                     except Gone:
                         store.delete("sn_push", [("endpoint", "eq", sub["endpoint"])])

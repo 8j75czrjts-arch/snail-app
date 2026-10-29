@@ -1,4 +1,4 @@
-# Drank Snail Natra
+# Drank Snailnatra
 
 Drink water. Don't die. A water tracker with a sassy diva snail: every bottle gets him dressed up a bit more, hit the goal and he sings Sinatra, miss a day and he's dead by midnight.
 
@@ -28,7 +28,7 @@ Testing a death without waiting for midnight: in the browser console run `localS
 2. **Vercel:** new project from this repo (framework preset "Other"; `vercel.json` already points the output at `public/`). Add two environment variables, then redeploy:
    - `SUPABASE_URL`: `https://<project-ref>.supabase.co`
    - `SUPABASE_SERVICE_KEY`: the *service_role* / secret key. Server-side only, never sent to the browser.
-3. **Phone:** open the Vercel URL in Safari, Share → Add to Home Screen. Home-screen name is "Snail Natra".
+3. **Phone:** open the Vercel URL in Safari, Share → Add to Home Screen. Home-screen name is "Snailnatra".
 
 ### Fast follow: turn on the nags (not live yet)
 

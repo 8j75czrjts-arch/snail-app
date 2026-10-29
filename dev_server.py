@@ -56,5 +56,5 @@ class Dev(SimpleHTTPRequestHandler):
 
 if __name__ == "__main__":
     port = int(sys.argv[1]) if len(sys.argv) > 1 else 8001
-    print(f"Snail Natra dev server on http://localhost:{port}  (memory store: {os.environ['SN_MEMORY'] == '1'})")
+    print(f"Snailnatra dev server on http://localhost:{port}  (memory store: {os.environ['SN_MEMORY'] == '1'})")
     ThreadingHTTPServer(("", port), Dev).serve_forever()

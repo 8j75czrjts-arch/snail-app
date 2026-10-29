@@ -16,11 +16,11 @@ export function stageFor(count, need) {
 }
 
 export const STAGES = [
-  { img: "snail-0-thirsty.svg", line: "Damn, he's thirsty.", alt: "Snail Natra, droopy and sweating with his tongue out" },
-  { img: "snail-1-diva.svg", line: "One down.", alt: "Snail Natra giving you a heavy-lidded diva look" },
-  { img: "snail-2-hat.svg", line: "Looking moist.", alt: "Snail Natra wearing a fedora" },
-  { img: "snail-3-bowtie.svg", line: "What's he gonna do?", alt: "Snail Natra in a fedora and bow tie, eyes wide" },
-  { img: "snail-4-singing.svg", line: "Oh shit, he's singing.", alt: "Snail Natra singing in a fedora and bow tie, with a saxophone and music notes" },
+  { img: "snail-0-thirsty.svg", line: "Damn, he's thirsty.", alt: "Snailnatra, droopy and sweating with his tongue out" },
+  { img: "snail-1-diva.svg", line: "One down.", alt: "Snailnatra giving you a heavy-lidded diva look" },
+  { img: "snail-2-hat.svg", line: "Looking moist.", alt: "Snailnatra wearing a fedora" },
+  { img: "snail-3-bowtie.svg", line: "What's he gonna do?", alt: "Snailnatra in a fedora and bow tie, eyes wide" },
+  { img: "snail-4-singing.svg", line: "Oh shit, he's singing.", alt: "Snailnatra singing in a fedora and bow tie, with a saxophone and music notes" },
 ];
 
 // What the little toast says when a bottle goes in.

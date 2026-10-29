@@ -50,8 +50,8 @@ const perDay = n => `= ${n == null ? "? bottles" : bottlesWord(n)} a day`;
 
 export const welcome = () => `
   <main class="screen welcome">
-    <h1 class="logo"><span style="font-size:64px;margin-left:6px">Drank</span><span class="big">Snail Natra</span></h1>
-    ${img("snail", "snail-1-diva.svg", "Snail Natra giving you a heavy-lidded diva look", "hero")}
+    <h1 class="logo"><span style="font-size:64px;margin-left:6px">Drank</span><span class="big">Snailnatra</span></h1>
+    ${img("snail", "snail-1-diva.svg", "Snailnatra giving you a heavy-lidded diva look", "hero")}
     <p class="tagline"><span class="sk-under" style="padding:0 6px 6px 4px">Drink water.</span> Don’t die.</p>
     <button type="button" data-act="go-email" class="btn sk-yellow" style="margin:auto 0 0 4px;transform:rotate(-1.4deg)">Get started</button>
     <button type="button" data-act="go-email" class="link" style="align-self:flex-end;margin:8px 24px 0 0;transform:rotate(2deg)">Log in</button>
@@ -115,9 +115,9 @@ export const hatched = () => `
   <main class="screen hatched">
     <h1 class="ask" style="margin:0 0 0 4px;font-size:72px;transform:rotate(-3deg)">It’s a snail!</h1>
     <div class="sk-box" style="margin:30px 0 0 8px;padding:18px 14px 16px 14px;transform:rotate(1.8deg)">
-      ${img("snail", "snail-baby-swaddle.svg", "Baby Snail Natra swaddled in a blue blanket with a pacifier and very long eye stalks", "", "width:280px;max-width:100%;height:auto;display:block;margin-left:10px")}
+      ${img("snail", "snail-baby-swaddle.svg", "Baby Snailnatra swaddled in a blue blanket with a pacifier and very long eye stalks", "", "width:280px;max-width:100%;height:auto;display:block;margin-left:10px")}
     </div>
-    <p style="margin:28px 0 0 10px;font-size:21px;line-height:1.35;transform:rotate(-1deg)">Meet Snail Natra. He’s a star, and stars need water.</p>
+    <p style="margin:28px 0 0 10px;font-size:21px;line-height:1.35;transform:rotate(-1deg)">Meet Snailnatra. He’s a star, and stars need water.</p>
     <p class="result" style="margin:10px 0 0 26px;font-size:30px;transform:rotate(1.5deg)">${bottlesWord(need())} a day or he dies.</p>
     <button type="button" data-act="start" class="btn sk-yellow" style="margin:auto 0 0 4px;transform:rotate(-1.4deg)">Fine. Let’s drink.</button>
   </main>`;
@@ -146,7 +146,7 @@ function alive() {
   const fx = S.fx || {};
   return `
   <main class="screen today">
-    <h1 class="title">Drank Snail Natra</h1>
+    <h1 class="title">Drank Snailnatra</h1>
     <section class="sk-box snailcard" style="transform:rotate(1.2deg)">
       ${img("snail", stage.img, stage.alt, `snailpic${fx.wobble ? " pop" : ""}${goalHit ? " sing" : ""}`)}
       <p class="headline">${esc(stage.line)}</p>
@@ -179,9 +179,9 @@ function rip() {
   const when = d.day === yesterday ? "Yesterday" : weekday(d.day);
   return `
   <main class="screen today rip">
-    <h1 class="title">Drank Snail Natra</h1>
+    <h1 class="title">Drank Snailnatra</h1>
     <section class="sk-dash snailcard" style="transform:rotate(-1deg)">
-      ${img("snail", "snail-dead.svg", "Snail Natra dead: his shell is a skull, eyes are X's, halo overhead", "snailpic")}
+      ${img("snail", "snail-dead.svg", "Snailnatra dead: his shell is a skull, eyes are X's, halo overhead", "snailpic")}
       <p class="headline" style="font-size:44px;transform:rotate(-2deg)">RIP that bitch.</p>
     </section>
     <section aria-label="${esc(when)}" class="meter">
@@ -256,13 +256,13 @@ export function settings() {
 
 export const loading = () => `
   <main class="screen center">
-    ${img("snail", "snail-0-thirsty.svg", "Snail Natra, waiting", "hero pulse", "width:260px")}
+    ${img("snail", "snail-0-thirsty.svg", "Snailnatra, waiting", "hero pulse", "width:260px")}
     <p class="result" style="font-size:34px;margin-top:12px">Waking him up…</p>
   </main>`;
 
 export const failed = () => `
   <main class="screen center">
-    ${img("snail", "snail-dead.svg", "Snail Natra, not moving", "hero", "width:240px")}
+    ${img("snail", "snail-dead.svg", "Snailnatra, not moving", "hero", "width:240px")}
     <p class="result" style="font-size:34px;margin:12px 0 0">Can’t reach him.</p>
     <p class="small" style="margin:6px 0 20px">${esc(S.error || "No connection.")}</p>
     <button type="button" data-act="retry" class="btn sk-yellow" style="width:80%;transform:rotate(-1deg)">Try again</button>

@@ -1,4 +1,4 @@
--- Drank Snail Natra schema. Run once in the Supabase SQL editor.
+-- Drank Snailnatra schema. Run once in the Supabase SQL editor.
 --
 -- Tables are prefixed sn_ so they never collide with anything already in the project
 -- (the Daily Tally app in the same project uses dt_).

@@ -36,6 +36,7 @@ Testing a death without waiting for midnight: in the browser console run `localS
 
 A web app can't schedule notifications on the phone the way a native app can, so nags are real Web Push sent from the server. Without this step everything else works; the Settings screen just hides the nagging box.
 
+0. Add a `requirements.txt` containing `pywebpush>=2.0.0` (left out of v1 so the deploy has nothing extra to build).
 1. `pip install pywebpush && python3 scripts/gen_vapid.py` and add the printed values to Vercel as `VAPID_PUBLIC_KEY` and `VAPID_PRIVATE_KEY`. Also add `CRON_SECRET` (any long random string) and optionally `VAPID_SUBJECT` (`mailto:you@example.com`).
 2. Redeploy, then run `supabase/cron.sql` (fill in the two placeholders) so the server is poked every 15 minutes.
 3. On iPhone, notifications only work for the app installed to the Home Screen (iOS 16.4+). The app asks once, right after "It's a snail!", and Settings → "His nagging" turns them on/off later.

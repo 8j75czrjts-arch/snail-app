@@ -54,4 +54,4 @@ The schedule and copy are the handoff's section 8. Each nag is sent at most once
 
 ## Shipping changes
 
-Installed copies cache the app shell. Bump `VERSION` in `public/sw.js` when you deploy changes so phones pick them up (close and reopen the app once).
+Installed copies cache the app shell. The service worker is network-first (cache is only the offline fallback), so phones pick up changes on the next open. Bump `VERSION` in `public/sw.js` if you ever change the list of cached files.

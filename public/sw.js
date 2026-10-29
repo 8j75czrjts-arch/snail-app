@@ -29,11 +29,17 @@ self.addEventListener("fetch", e => {
   const req = e.request;
   const url = new URL(req.url);
   if (req.method !== "GET" || url.origin !== location.origin || url.pathname.startsWith("/api")) return;
-  // Stale-while-revalidate: answer from cache, refresh the cache in the background.
+  // Network first, cache as the offline fallback. (Stale-while-revalidate left iPhones on old files.)
   e.respondWith(caches.open(VERSION).then(async cache => {
-    const hit = await cache.match(req, { ignoreSearch: true });
-    const net = fetch(req).then(res => { if (res.ok) cache.put(req, res.clone()); return res; }).catch(() => hit);
-    return hit || net;
+    try {
+      const res = await fetch(req);
+      if (res.ok) cache.put(req, res.clone());
+      return res;
+    } catch {
+      const hit = await cache.match(req, { ignoreSearch: true });
+      if (hit) return hit;
+      throw new Error("offline");
+    }
   }));
 });
 
